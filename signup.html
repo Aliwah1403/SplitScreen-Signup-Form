@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split-Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="split-screen">
+      <div class="left">
+        <section class="copy">
+          <h1>Exolore your creativity</h1>
+          <p>Over 1000 courses taught by real creatives</p>
+        </section>
+      </div>
+
+      <div class="right">
+        <form>
+          <section class="copy">
+            <h2>Create An Account With Us</h2>
+            <div class="login-container">
+              <p>
+                Already have an account?
+                <a href="login.html">
+                  <strong>Log In</strong>
+                </a>
+              </p>
+            </div>
+          </section>
+
+          <div class="signupForm">
+            <div class="input-container name">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+
+            <div class="input-container email">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+
+            <div class="input-container password">
+              <label for="name">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                autocomplete="off"
+                placeholder="Must be atleast 6 characters"
+              />
+              <i class="bx bx-hide eye-icon"></i>
+            </div>
+
+            <div class="input-container cta">
+              <label class="checkbox-container">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Sign up for email updates
+              </label>
+            </div>
+
+            <button class="submit-btn" type="submit">Sign Up</button>
+
+            <div class="line"></div>
+
+            <div class="social-options">
+              <button class="google" type="submit">
+                <img src="images/google.png" class="google-img" />
+                <span>Continue With Google</span>
+              </button>
+              <button class="facebook" type="submit">
+                <i class="bx bxl-facebook facebook-icon"></i>
+                <span>Continue With Facebook</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="signup-options">
+            <button class="signup-btn" type="submit">
+              <i class="bx bx-envelope email-icon"></i>
+              Sign Up with email
+            </button>
+            <button class="google" type="submit">
+              <img src="images/google.png" class="google-img" />
+              <span>Continue With Google</span>
+            </button>
+            <button class="facebook" type="submit">
+              <i class="bx bxl-facebook facebook-icon"></i>
+              <span>Continue With Facebook</span>
+            </button>
+          </div>
+
+          <section class="copy legal">
+            <p>
+              <span class="small"
+                >By continuing, you agree to accept our <br />
+                <a href="#">Privacy Policy</a> &amp;
+                <a href="#"> Terms of Service </a>
+              </span>
+            </p>
+          </section>
+        </form>
+      </div>
+    </div>
+    <!-- <button class="signup-btn" type="submit">Sign Up</button> -->
+    <script src="script.js"></script>
+  </body>
+</html>

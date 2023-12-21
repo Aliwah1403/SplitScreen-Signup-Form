@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  --primary-green: #088178;
+  --hover-green: #089188;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-green);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 80%;
+  text-align: center;
+}
+
+.split-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  height: 200px;
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url(images/banner-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.left .copy {
+  color: #fff;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.left p {
+  font-weight: 400;
+}
+
+.right .copy {
+  color: black;
+  text-align: center;
+}
+
+.right .copy p {
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+}
+
+.signupForm {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.right form {
+  width: 320px;
+}
+
+.line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background-color: #d4d4d4;
+  margin: 36px 0;
+}
+
+.line::before {
+  content: "OR";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #222;
+  padding: 0 15px;
+}
+
+.signup-options,
+.social-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-options button,
+.social-options button,
+.submit-btn {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signup-options button:hover,
+.submit-btn:hover,
+.social-options button:hover {
+  cursor: pointer;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #c4c4c4;
+  outline: none;
+  padding: 1em;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
+
+form input:focus {
+  border-bottom: 2px solid var(--primary-green);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.input-container.password {
+  position: relative;
+}
+
+.input-container.password i {
+  position: absolute;
+  top: 42px;
+  right: 16px;
+  cursor: pointer;
+  color: #8b8b8b;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 1.25rem 0;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+}
+
+.checkmark {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  top: -4px;
+  left: 0;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-container .checkmark::after {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  width: 5px;
+  height: 10px;
+  left: 8px;
+  top: 4px;
+  transform: rotate(45deg);
+}
+
+.signup-btn,
+.submit-btn {
+  background: var(--primary-green);
+  color: #fff;
+  border: none;
+}
+
+.signup-btn:hover,
+.submit-btn:hover {
+  background: var(--hover-green);
+}
+
+.facebook-icon,
+.google-img,
+.email-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.email-icon {
+  width: 28px;
+  height: 20px;
+  font-size: 23px;
+}
+
+.google-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+.google {
+  border: 1px solid #cacaca;
+  background: #fff;
+}
+
+.google span {
+  opacity: 0.8;
+  font-weight: 500;
+  color: #222;
+}
+
+.facebook {
+  color: #fff;
+  background-color: #0171d3;
+  border: none;
+}
+
+.facebook .facebook-icon {
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #0171d3;
+}
+
+@media screen and (min-width: 900px) {
+  .split-screen {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
+}
